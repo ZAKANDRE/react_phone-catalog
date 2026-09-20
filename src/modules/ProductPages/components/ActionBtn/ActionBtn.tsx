@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 
+import { publicPath } from '../../../../shared/utils/publicPath';
+
 type SortValueType = {
   id: number;
   value: number | string;
@@ -89,7 +91,7 @@ export const ActionBtn = ({
 
         {!isSort && (
           <img
-            src="img/shared/next-ordinary.svg"
+            src={publicPath('img/shared/next-ordinary.svg')}
             alt=""
             className="list-closed"
           />
@@ -97,7 +99,7 @@ export const ActionBtn = ({
 
         {isSort && (
           <img
-            src="img/shared/next-ordinary.svg"
+            src={publicPath('img/shared/next-ordinary.svg')}
             alt=""
             className="list-open"
           />

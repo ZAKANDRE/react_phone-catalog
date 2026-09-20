@@ -20,6 +20,8 @@ import {
 import { ActionBtn } from '../components/ActionBtn';
 import { sortItems } from '../utils/sort';
 
+import { publicPath } from '../../../shared/utils/publicPath';
+
 export const Product = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentPageUrl = searchParams.get('page');
@@ -199,9 +201,9 @@ export const Product = () => {
         <div className="grid">
           <div className="breadcrumbs">
             <Link to={'/'}>
-              <img src="img/shared/Home.svg" alt="" />
+              <img src={publicPath('img/shared/Home.svg')} alt="" />
               <img
-                src="img/shared/next-breadcrumbs.svg"
+                src={publicPath('img/shared/next-breadcrumbs.svg')}
                 alt=""
                 className="next-breadcrumbs"
               />
@@ -209,7 +211,7 @@ export const Product = () => {
             <Link to={`/${itemCategory}`}>
               {itemCategory}
               <img
-                src="img/shared/next-breadcrumbs.svg"
+                src={publicPath('img/shared/next-breadcrumbs.svg')}
                 alt=""
                 className="next-breadcrumbs"
               />

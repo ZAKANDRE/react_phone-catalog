@@ -5,6 +5,8 @@ import { useFavorites } from '../../context/Favorites/FavoritesContext';
 import { useCart } from '../../context/Cart/CartContext';
 import classNames from 'classnames';
 
+import { publicPath } from '../../utils/publicPath';
+
 export const CardItem = ({
   cardItem,
   isFullPrice,
@@ -89,9 +91,9 @@ export const CardItem = ({
               }}
             >
               {isFavorite(cardItem.id) ? (
-                <img src="img/home/card/fav-hover.svg" alt="" />
+                <img src={publicPath('img/home/card/fav-hover.svg')} alt="" />
               ) : (
-                <img src="img/home/card/fav.svg" alt="" />
+                <img src={publicPath('img/home/card/fav.svg')} alt="" />
               )}
             </button>
           </footer>

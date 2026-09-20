@@ -8,6 +8,8 @@ import { useFavorites } from '../../../../context/Favorites/FavoritesContext';
 import { useCart } from '../../../../context/Cart/CartContext';
 import { getLinksClass } from '../../hooks/getLinks';
 
+import { publicPath } from '../../../../utils/publicPath';
+
 export const NavMobile = ({ isVisible, onVisible }: MenuXs) => {
   const { favorites } = useFavorites();
   const { cart } = useCart();
@@ -43,7 +45,7 @@ export const NavMobile = ({ isVisible, onVisible }: MenuXs) => {
             onVisible(0);
           }}
         >
-          <img src="img/header/fav.svg" alt="" />
+          <img src={publicPath('img/header/fav.svg')} alt="" />
           {favorites.length > 0 && (
             <span className="notifications-counter">{favorites.length}</span>
           )}
@@ -55,7 +57,7 @@ export const NavMobile = ({ isVisible, onVisible }: MenuXs) => {
             onVisible(0);
           }}
         >
-          <img src="img/header/cart.svg" alt="" />
+          <img src={publicPath('img/header/cart.svg')} alt="" />
           {cart.length > 0 && (
             <span className="notifications-counter">{cart.length}</span>
           )}

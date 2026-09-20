@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import './Search.scss';
+import { publicPath } from '../../../../utils/publicPath';
+
 type SearchType = {
   formState: boolean;
   searchString: string;
@@ -71,7 +73,7 @@ export const Search = ({
           )}
           onClick={e => handleIconSearch(e)}
         >
-          <img src="img/shared/search.svg" alt="" />
+          <img src={publicPath('img/shared/search.svg')} alt="" />
         </NavLink>
       </div>
     </>

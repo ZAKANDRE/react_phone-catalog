@@ -9,6 +9,8 @@ import './Header.scss';
 import classNames from 'classnames';
 import { Search } from './components/Search/Search';
 
+import { publicPath } from '../../utils/publicPath';
+
 export const Header = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isOpen, setIsOpen] = useState<number>(0);
@@ -62,9 +64,9 @@ export const Header = () => {
       })}
     >
       <section className="header-desktop">
-        <Link to={'/'} className="header-desktop-logo-link">
-          <img src="img/shared/logo.svg" alt="" />
-        </Link>
+        <a href="/" className="header-desktop-logo-link">
+          <img src={publicPath('img/shared/logo.svg')} alt="" />
+        </a>
         <div className="header-desktop-navigation-wrapper wrapper">
           <nav className="header-desktop-navigation grid">
             <ul
@@ -107,7 +109,7 @@ export const Header = () => {
             )}
           </NavLink>
           <NavLink to={'/cart'} className="header-desktop-right-side-cart-link">
-            <img src="img/header/cart.svg" alt="" />
+            <img src={publicPath('img/header/cart.svg')} alt="" />
             {cart.length > 0 && (
               <span className="notifications-counter">{totalItems} </span>
             )}

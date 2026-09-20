@@ -6,6 +6,8 @@ import './MainControls.scss';
 import classNames from 'classnames';
 import { useCart } from '../../../../../shared/context/Cart/CartContext';
 
+import { publicPath } from '../../../../../shared/utils/publicPath';
+
 export const MainControls = ({
   products,
   colors,
@@ -123,9 +125,9 @@ export const MainControls = ({
               }}
             >
               {isFavorite(favoriteId) ? (
-                <img src="img/home/card/fav-hover.svg" alt="" />
+                <img src={publicPath('img/home/card/fav-hover.svg')} alt="" />
               ) : (
-                <img src="img/home/card/fav.svg" alt="" />
+                <img src={publicPath('img/home/card/fav.svg')} alt="" />
               )}
             </button>
           </section>
