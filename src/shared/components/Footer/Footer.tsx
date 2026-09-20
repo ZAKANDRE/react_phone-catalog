@@ -4,7 +4,12 @@ import './Footer.scss';
 export const Footer = () => {
   return (
     <footer className="wrapper">
+              <p className="tarot-link">Envie de prolonger la détente après votre séance ? <br/>
+         Le site <a href="https://tarot-magic.com/fr/daily-card">Tarot Magic</a> propose une carte du jour gratuite, sans inscription, pour se poser une question et y réfléchir en douceur.
+        </p>
       <div className="footer-section grid">
+
+
         <div className="left-section">
           <Link to={'#'}>
             <img src="img/shared/logo.svg" alt="" />
